@@ -52,14 +52,6 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .card {
-    display: none;
-  }
-  .intro {
-    width: 320px;
-  }
-}
 [theme="dark"] .box {
   --main-bg: conic-gradient(
     from var(--border-angle),
@@ -119,4 +111,13 @@
   syntax: "<angle>";
   inherits: true;
   initial-value: 0turn;
+}
+
+@media only screen and (max-width: 768px) {
+  .box {
+    display: none;
+  }
+  .intro {
+    width: 320px;
+  }
 }
