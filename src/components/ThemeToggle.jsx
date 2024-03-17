@@ -6,7 +6,9 @@ import { IoMoonOutline } from "react-icons/io5";
 const ThemeToggle = () => {
   const [darkMode, setDarkMode] = useState(false);
 
-  const theme = localStorage.getItem("theme");
+  // Check if localStorage is available before using it
+  const theme =
+    typeof window !== "undefined" ? localStorage.getItem("theme") : null;
 
   useEffect(() => {
     if (theme === "dark") {
