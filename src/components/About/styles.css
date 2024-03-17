@@ -1,0 +1,75 @@
+@keyframes waveBackground {
+  to {
+    transform: scale(1.2);
+  }
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.intro {
+  color: gray;
+  margin-top: 30px;
+  width: 65%;
+  position: relative;
+  margin-left: 40px;
+}
+.intro::before {
+  height: 3px;
+  width: 30px;
+  position: absolute;
+  content: "";
+  background-color: #ec4d37;
+  top: 10px;
+  left: -40px;
+}
+.des {
+  background: linear-gradient(
+    90deg,
+    hsla(14, 98%, 50%, 0.3),
+    hsla(14, 98%, 50%, 0)
+  );
+}
+.des-img {
+  height: 60vh;
+  width: 35%;
+  position: relative;
+}
+
+.avatar {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  position: absolute;
+  animation: 1.5s ease-out 0s 1 slideInLeft;
+}
+.box-shadow::after {
+  width: 90%;
+  height: 90%;
+  content: "";
+  border: solid 2px #ec4d37;
+  position: absolute;
+  animation: 1.5s ease-out 0s 1 slideInRight;
+  left: 30px;
+  top: 30px;
+  transition: top 1s linear, left 1s linear;
+}
+
+.box-shadow:hover::after {
+  left: 0px;
+  top: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+  .des-img {
+    display: none;
+  }
+  .intro {
+    width: 320px;
+  }
+}
