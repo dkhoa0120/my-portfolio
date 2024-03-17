@@ -36,7 +36,7 @@ function About() {
           UI-UX, proficient in managing front-end logic, and skilled in working
           with APIs. I am hoping for your guidance and support in my journey.{" "}
         </p>
-        <div className="flex absolute gap-4 mt-4">
+        <div className="flex absolute gap-4 mt-4 max-md:static">
           <a href="cv.pdf" download="CV.pdf">
             <FaDownload className="text-[#EC4D37] text-[26px] cursor-pointer" />
           </a>
