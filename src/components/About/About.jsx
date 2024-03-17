@@ -19,9 +19,7 @@ function About() {
       </div>
       <div className="md:w-[35%] mx-4 text-left p-3 max-md:flex max-md:flex-col max-md:items-center max-md:justify-center">
         <p className="font-bold text-5xl max-lg:text-3xl flex gap-3">
-          <div>
-            Hi, I Am <span className="text-[#ec4d37]"> Khoa</span> Le
-          </div>
+          Hi, I Am <span className="text-[#ec4d37]"> Khoa</span> Le
         </p>
         <h2 className="font-bold text-5xl max-lg:text-3xl  max-md:hidden">
           <Typewriter
