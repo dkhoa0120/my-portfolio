@@ -18,13 +18,14 @@ function About() {
         />
       </div>
       <div className="md:w-[35%] mx-4 text-left p-3 max-md:flex max-md:flex-col max-md:items-center max-md:justify-center">
-        <p className="font-bold text-5xl max-lg:text-3xl flex gap-3">
-          Hi, I Am <span className="text-[#ec4d37]"> Khoa</span> Le
+        <p className="font-bold text-4xl max-lg:text-3xl flex gap-3">
+          Hi, I Am <span className="text-[#ec4d37]"> Khoa</span> Le{" "}
+          <span className="text-[#ec4d37]">👋</span>
         </p>
-        <h2 className="font-bold text-5xl max-lg:text-3xl  max-md:hidden">
+        <h2 className="font-bold text-4xl max-lg:text-3xl  max-md:hidden">
           <Typewriter
             onInit={(typewriter) => {
-              typewriter.typeString("Front-End React Developer 👋").start();
+              typewriter.typeString("Front-End React Developer").start();
             }}
           />
         </h2>
@@ -46,11 +47,13 @@ function About() {
           </a>
         </div>
       </div>
-      <div className="des-img">
-        <div className="box-shadow">
-          {" "}
-          <img className="avatar" src="/img/avatar/khoa.jpg" alt="Avatar" />
-        </div>
+
+      <div className="box">
+        <Image
+          className="avatar"
+          src="/img/avatar/khoa-nobg.png"
+          alt="Avatar"
+        />
       </div>
     </div>
   );

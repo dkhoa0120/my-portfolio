@@ -87,7 +87,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="fixed h-14 w-full bottom-0 flex items-center dark:bg-[#13191b] justify-between p-5 bg-[#eeeeee] z-50 m-auto md:flex-col md:top-20 md:w-[20px] md:h-72 md:right-5">
+      <div className="fixed h-14 w-full bottom-0 flex items-center dark:bg-[#111111] justify-between p-5 bg-[#eeeeee] z-50 m-auto md:flex-col md:top-20 md:w-[20px] md:h-72 md:right-5 md:rounded-3xl">
         <button onClick={() => scrollToRef(aboutSectionRef)}>
           {" "}
           <IoMdHome
@@ -108,9 +108,13 @@ export default function Home() {
         <AiFillProject className="cursor-pointer text-lg" />
         <IoIosMail className="cursor-pointer text-lg" />
       </div>
-      <main className="min-h-screen relative bg-white text-black dark:bg-black dark:text-white">
+      <main className="min-h-screen relative ">
         <ParticlesContainer />
-        <div className="flex-col items-center justify-between flex sticky top-0 z-50">
+        <div
+          className={`flex-col items-center justify-between flex sticky top-0 z-50 ${
+            scrolled ? "bg-[--body_background] shadow-md" : ""
+          }`}
+        >
           <Header />
         </div>{" "}
         <section id="about" ref={aboutSectionRef}>

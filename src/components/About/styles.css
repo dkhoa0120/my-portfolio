@@ -3,14 +3,6 @@
     transform: scale(1.2);
   }
 }
-@keyframes slideInRight {
-  0% {
-    transform: translateX(30%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 
 .intro {
   color: gray;
@@ -35,41 +27,96 @@
     hsla(14, 98%, 50%, 0)
   );
 }
-.des-img {
-  height: 60vh;
-  width: 35%;
-  position: relative;
-}
 
 .avatar {
-  width: 90%;
-  height: 90%;
+  top: -20px;
+  width: 110%;
+  height: 110%;
   object-fit: cover;
   position: absolute;
-  animation: 1.5s ease-out 0s 1 slideInLeft;
-}
-.box-shadow::after {
-  width: 90%;
-  height: 90%;
-  content: "";
-  border: solid 2px #ec4d37;
-  position: absolute;
   animation: 1.5s ease-out 0s 1 slideInRight;
-  left: 30px;
-  top: 30px;
-  transition: top 1s linear, left 1s linear;
 }
 
-.box-shadow:hover::after {
-  left: 0px;
-  top: 0px;
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(30%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @media only screen and (max-width: 768px) {
-  .des-img {
+  .card {
     display: none;
   }
   .intro {
     width: 320px;
   }
+}
+[theme="dark"] .box {
+  --main-bg: conic-gradient(
+    from var(--border-angle),
+    rgb(35, 35, 39),
+    rgb(35, 35, 38) 5%,
+    rgb(36, 36, 38) 60%,
+    rgb(28, 28, 30) 95%
+  );
+}
+
+.box {
+  height: 70vh;
+  width: 35%;
+  display: flex;
+  position: relative;
+  place-content: center;
+  color: white;
+  text-shadow: 0 1px 0 #000;
+
+  --border-angle: 0turn;
+  --main-bg: conic-gradient(
+    from var(--border-angle),
+    #f7f4f4,
+    #f2f2f2 5%,
+    #fefefe 60%,
+    #fcfafa 95%
+  );
+
+  border: solid 5px transparent;
+  border-radius: 30%;
+  --gradient-border: conic-gradient(
+    from var(--border-angle),
+    transparent 25%,
+    rgb(244, 67, 18),
+    rgb(253, 82, 14) 99%,
+    transparent
+  );
+
+  background: var(--main-bg) padding-box, var(--gradient-border) border-box,
+    var(--main-bg) border-box;
+
+  background-position: center center;
+
+  animation: bg-spin 3s linear infinite;
+  @keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
 }
