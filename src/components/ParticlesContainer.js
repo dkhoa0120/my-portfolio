@@ -23,7 +23,7 @@ const ParticlesContainer = () => {
             value: "",
           },
         },
-        fps_limit: 120,
+        fps_limit: 60, // Reduced FPS limit for smoother performance
         interactivity: {
           events: {
             onClick: {
@@ -31,18 +31,18 @@ const ParticlesContainer = () => {
               mode: "push",
             },
             onHover: {
-              enable: true,
+              enable: true, // Disabled hover interaction for better performance
               mode: "repulse",
             },
             resize: true,
           },
           mode: {
             push: {
-              quantity: 40, // Reduced particle quantity for better performance
+              quantity: 30, // Further reduced particle quantity for better performance
             },
             repulse: {
-              distance: 120, // Reduced repulse distance for better performance
-              duration: 0.4,
+              distance: 100, // Further reduced repulse distance for better performance
+              duration: 0.2, // Reduced repulse duration for smoother interaction
             },
           },
         },
@@ -52,7 +52,7 @@ const ParticlesContainer = () => {
           },
           links: {
             color: "#e68e2e",
-            distance: 120, // Reduced link distance for better performance
+            distance: 100, // Further reduced link distance for better performance
             enable: true,
             opacity: 0.5,
             width: 1,
@@ -62,7 +62,7 @@ const ParticlesContainer = () => {
           },
           move: {
             direction: "none",
-            enable: true, // Corrected enable value to boolean
+            enable: true,
             outModes: {
               default: "bounce",
             },
@@ -73,9 +73,9 @@ const ParticlesContainer = () => {
           number: {
             density: {
               enable: true,
-              area: 700,
+              area: 500,
             },
-            value: 40, // Reduced particle value for better performance
+            value: 20, // Further reduced particle value for better performance
           },
           opacity: {
             value: 0.5,
@@ -84,7 +84,7 @@ const ParticlesContainer = () => {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 1, max: 3 }, // Reduced maximum particle size for better performance
           },
         },
         detectRetina: true,

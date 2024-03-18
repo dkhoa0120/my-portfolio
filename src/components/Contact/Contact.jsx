@@ -56,7 +56,7 @@ const Contact = () => {
           Get In Touch.
         </span>
       </div>
-      <div className="h-screen w-[80%] flex max-lg:flex-col max-lg:gap-10">
+      <div className="h-screen w-[80%] flex max-lg:flex-col gap-10 relative">
         <div
           className="w-[50%] max-lg:w-full flex flex-col items-center"
           data-aos="fade-right"
@@ -78,7 +78,7 @@ const Contact = () => {
           </div>
         </div>
         <div
-          className="h-[90%]  w-[50%] max-lg:h-[70%] flex items-center justify-center shadow-md relative ml-6 bg-[#ec4d37] max-lg:w-full max-lg:ml-0"
+          className="h-[90%] w-[50%] max-lg:h-[70%] flex items-center justify-center shadow-md relative bg-[#ec4d37] max-lg:w-full "
           data-aos="fade-left"
           style={{ borderRadius: "12px" }}
         >
