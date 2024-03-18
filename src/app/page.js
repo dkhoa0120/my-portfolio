@@ -8,6 +8,7 @@ import { IoMdHome } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
 import { AiFillProject } from "react-icons/ai";
 import { IoIosMail } from "react-icons/io";
+import Project from "@/components/Project/Project";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -104,8 +105,15 @@ export default function Home() {
             }`}
           />
         </button>
+        <button onClick={() => scrollToRef(projectSectionRef)}>
+          {" "}
+          <AiFillProject
+            className={`cursor-pointer ${
+              isProjectSectionInView ? "text-[#ec4d37] text-3xl" : "text-lg"
+            }`}
+          />
+        </button>
 
-        <AiFillProject className="cursor-pointer text-lg" />
         <IoIosMail className="cursor-pointer text-lg" />
       </div>
       <main className="min-h-screen relative ">
@@ -120,8 +128,11 @@ export default function Home() {
         <section id="about" ref={aboutSectionRef}>
           <About />
         </section>
-        <section id="journey" ref={journeySectionRef}>
+        <section id="journey" ref={journeySectionRef} className="mt-20">
           <Journey />
+        </section>
+        <section id="project" ref={projectSectionRef}>
+          <Project />
         </section>
       </main>
     </>

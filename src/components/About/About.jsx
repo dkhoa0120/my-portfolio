@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Typewriter from "typewriter-effect";
-import { Image, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Image } from "react-bootstrap";
 import { FaDownload } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
@@ -10,7 +10,7 @@ import "./styles.css";
 function About() {
   return (
     <div className="flex justify-center items-center max-md:flex-col h-screen -mt-12 gap-3 ">
-      <div className="md:hidden -mt-6 block relative w-44 h-44">
+      <div className="md:hidden max-md:mt-12 block relative w-44 h-44">
         <Image
           className="w-full h-full object-cover rounded-full max-md:-mt-16 border border-[#ec4d37]"
           src="/img/avatar/khoa.jpg"
@@ -18,11 +18,11 @@ function About() {
         />
       </div>
       <div className="md:w-[35%] mx-4 text-left p-3 max-md:flex max-md:flex-col max-md:items-center max-md:justify-center">
-        <p className="font-bold text-4xl max-lg:text-3xl flex gap-3">
+        <p className="font-black text-4xl max-lg:text-3xl flex gap-3">
           Hi, I Am <span className="text-[#ec4d37]"> Khoa</span> Le{" "}
           <span className="text-[#ec4d37]">👋</span>
         </p>
-        <h2 className="font-bold text-4xl max-lg:text-3xl  max-md:hidden">
+        <h2 className="font-black text-4xl max-lg:text-3xl  max-md:hidden">
           <Typewriter
             onInit={(typewriter) => {
               typewriter.typeString("Front-End React Developer").start();

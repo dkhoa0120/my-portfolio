@@ -1,0 +1,168 @@
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 100px auto 0px auto;
+}
+
+.timeline-container {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+}
+.left-timeline {
+  left: 0;
+}
+.right-timeline {
+  left: 50%;
+}
+
+.text-box {
+  background-color: var(--body_card);
+  z-index: 999;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 50px;
+  border-bottom: #ec4d37 1px solid;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #ec4d37;
+  top: 0;
+  left: 50%;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: #ec4d37;
+  border-radius: 50%;
+  position: absolute;
+}
+.left {
+  right: -15px;
+}
+
+.right {
+  left: -15px;
+}
+
+.time-left {
+  position: absolute;
+  left: 100%;
+  width: 200px;
+  margin-left: 30px;
+  font-weight: 500;
+}
+
+.time-right {
+  position: absolute;
+  left: -17%;
+  font-weight: 500;
+}
+.skills {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.ex-text {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.experience {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  padding-bottom: 200px;
+  width: 100%;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 7px var(--body_scroll);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.language {
+  position: absolute;
+  width: 60%;
+}
+
+@media only screen and (max-width: 768px) {
+  .timeline {
+    position: relative; /* This line is redundant, you can remove it */
+  }
+
+  .experience {
+    padding: 20px 0; /* Adjust padding */
+    flex-direction: column; /* Change flex-direction to column */
+  }
+
+  .left-timeline,
+  .right-timeline {
+    left: 0; /* Adjust left position */
+  }
+
+  .timeline-container {
+    width: 100%; /* Adjust width */
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+    top: 12px;
+    background-color: var(--body_color);
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .left {
+    right: calc(100% - 37px); /* Adjust left position */
+  }
+
+  .right {
+    left: 17px;
+  }
+
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: var(--body_color);
+    top: 0;
+    left: 7%;
+  }
+
+  .time-left,
+  .time-right {
+    position: relative; /* Change position to relative */
+    left: auto; /* Reset left position */
+    width: auto; /* Reset width */
+    margin-left: 0; /* Reset margin-left */
+  }
+
+  .time-right {
+    left: auto; /* Reset left position */
+    right: 0; /* Adjust right position */
+  }
+
+  .skills {
+    flex-flow: row wrap; /* Remove display property and adjust flex-flow */
+  }
+}
