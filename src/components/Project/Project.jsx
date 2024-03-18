@@ -53,7 +53,7 @@ const Project = () => {
       </div>
       <div className="project">
         {data.map((i) => (
-          <div className="project-container" key={i.id} data-aos="flip-left">
+          <div className="project-container" key={i.id} data-aos="fade-up">
             <div className="project-img">
               <img className="pc-img" src={i.img} alt="" />
               <div className="image-container">

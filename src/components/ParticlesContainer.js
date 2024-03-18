@@ -38,7 +38,7 @@ const ParticlesContainer = () => {
           },
           mode: {
             push: {
-              quantity: 50, // Reduced particle quantity for better performance
+              quantity: 40, // Reduced particle quantity for better performance
             },
             repulse: {
               distance: 120, // Reduced repulse distance for better performance
@@ -73,9 +73,9 @@ const ParticlesContainer = () => {
           number: {
             density: {
               enable: true,
-              area: 800,
+              area: 700,
             },
-            value: 50, // Reduced particle value for better performance
+            value: 40, // Reduced particle value for better performance
           },
           opacity: {
             value: 0.5,

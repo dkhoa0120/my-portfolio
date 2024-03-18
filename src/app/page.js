@@ -149,7 +149,7 @@ export default function Home() {
         <section id="contact" ref={contactSectionRef} className="mt-32">
           <Contact />
         </section>
-        <div className="mt-[100px] flex justify-center p-[50px] w-full bg-[--body_scroll]">
+        <div className="mt-[100px] flex justify-center p-[50px] w-full bg-[--body_scroll] max-lg:hidden">
           <span className="flex items-center gap-1 text-gray-500 justify-center font-bold">
             Copyright{" "}
             <span className="flex items-center">

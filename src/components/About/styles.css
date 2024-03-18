@@ -20,13 +20,6 @@
   top: 10px;
   left: -40px;
 }
-.des {
-  background: linear-gradient(
-    90deg,
-    hsla(14, 98%, 50%, 0.3),
-    hsla(14, 98%, 50%, 0)
-  );
-}
 
 .avatar {
   top: -20px;
@@ -95,12 +88,6 @@
   &:hover {
     animation-play-state: paused;
   }
-}
-
-@property --border-angle {
-  syntax: "<angle>";
-  inherits: true;
-  initial-value: 0turn;
 }
 
 @media only screen and (max-width: 768px) {

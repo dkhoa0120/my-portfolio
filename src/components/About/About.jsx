@@ -57,7 +57,7 @@ function About() {
         </div>
       </div>
 
-      <div className="box" data-aos="zoom-in">
+      <div className="box" data-aos="flip-left">
         <Image
           className="avatar"
           src="/img/avatar/khoa-nobg.png"
