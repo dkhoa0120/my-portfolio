@@ -15,7 +15,7 @@ const ParticlesContainer = () => {
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
-      className="w-full h-full absolute translate-z-0"
+      className="w-full h-[98%] absolute translate-z-0"
       options={{
         fullScreen: { enable: false },
         background: {
@@ -38,21 +38,21 @@ const ParticlesContainer = () => {
           },
           mode: {
             push: {
-              quantity: 90,
+              quantity: 50, // Reduced particle quantity for better performance
             },
             repulse: {
-              distance: 200,
+              distance: 120, // Reduced repulse distance for better performance
               duration: 0.4,
             },
           },
         },
         particles: {
           color: {
-            value: "#e68e2e",
+            value: "#ec4d37",
           },
           links: {
-            color: "#f5d393",
-            distance: 150,
+            color: "#e68e2e",
+            distance: 120, // Reduced link distance for better performance
             enable: true,
             opacity: 0.5,
             width: 1,
@@ -62,7 +62,7 @@ const ParticlesContainer = () => {
           },
           move: {
             direction: "none",
-            enable: "true",
+            enable: true, // Corrected enable value to boolean
             outModes: {
               default: "bounce",
             },
@@ -75,7 +75,7 @@ const ParticlesContainer = () => {
               enable: true,
               area: 800,
             },
-            value: 80,
+            value: 50, // Reduced particle value for better performance
           },
           opacity: {
             value: 0.5,

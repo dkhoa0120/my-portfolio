@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles.css";
 
+import "aos/dist/aos.css";
+
 const skills = [
   {
     id: 1,
@@ -39,7 +41,10 @@ const skills = [
 function Journey() {
   return (
     <div className="w-full min-h-screen ">
-      <div className="flex flex-col justify-center items-center">
+      <div
+        className="flex flex-col justify-center items-center"
+        data-aos="fade-down"
+      >
         <span className="sm:text-[16px] text-[10px] text-secondary uppercase tracking-wider text-center text-gray-500">
           What I have done so far
         </span>
@@ -48,7 +53,7 @@ function Journey() {
         </span>
       </div>
       <div className="timeline">
-        <div className="timeline-container left-timeline">
+        <div className="timeline-container left-timeline" data-aos="fade-right">
           <div className="time-left">September 2020</div>
           <div className="circle left"></div>
           <div className="text-box">
@@ -77,7 +82,7 @@ function Journey() {
             </div>
           </div>
         </div>
-        <div className="timeline-container right-timeline">
+        <div className="timeline-container right-timeline" data-aos="fade-left">
           <div className="time-right">May 2021</div>
           <div className="circle right"></div>
           <div className="text-box">
@@ -118,7 +123,7 @@ function Journey() {
             </div>
           </div>
         </div>
-        <div className="timeline-container left-timeline">
+        <div className="timeline-container left-timeline" data-aos="fade-right">
           <div className="time-left">February 2024</div>
           <div className="circle left"></div>
           <div className="text-box">
@@ -152,7 +157,11 @@ function Journey() {
           </div>
         </div>
       </div>
-      <div className="experience">
+      <div
+        className="experience"
+        data-aos="zoom-in-right"
+        data-aos-duration="1000"
+      >
         <div className="ex-text">
           Experienced With{" "}
           <div

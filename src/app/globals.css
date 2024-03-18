@@ -5,14 +5,14 @@
 :root {
   --body_background: white;
   --body_color: rgb(32, 31, 31);
-  --body_scroll: #666;
+  --body_scroll: #363636;
   --body_second_theme: #fb9385;
 }
 
 [theme="dark"] {
   --body_background: rgb(32, 31, 31);
   --body_color: rgb(236, 236, 236);
-  --body_scroll: #363636;
+  --body_scroll: #000000;
   --body_second_theme: #a1574e;
 }
 body {

@@ -34,21 +34,11 @@
   height: 110%;
   object-fit: cover;
   position: absolute;
-  animation: 1.5s ease-out 0s 1 slideInRight;
 }
 
 @keyframes bg-spin {
   to {
     --border-angle: 1turn;
-  }
-}
-
-@keyframes slideInRight {
-  0% {
-    transform: translateX(30%);
-  }
-  100% {
-    transform: translateX(0);
   }
 }
 

@@ -1,16 +1,25 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Typewriter from "typewriter-effect";
 import { Image } from "react-bootstrap";
 import { FaDownload } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import "./styles.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function About() {
+  useEffect(() => {
+    AOS.init({ duration: 1800 });
+  }, []);
+
   return (
     <div className="flex justify-center items-center max-md:flex-col h-screen -mt-12 gap-3 ">
-      <div className="md:hidden max-md:mt-12 block relative w-44 h-44">
+      <div
+        className="md:hidden max-md:mt-12 block relative w-44 h-44"
+        data-aos="zoom-in"
+      >
         <Image
           className="w-full h-full object-cover rounded-full max-md:-mt-16 border border-[#ec4d37]"
           src="/img/avatar/khoa.jpg"
@@ -48,7 +57,7 @@ function About() {
         </div>
       </div>
 
-      <div className="box">
+      <div className="box" data-aos="zoom-in">
         <Image
           className="avatar"
           src="/img/avatar/khoa-nobg.png"

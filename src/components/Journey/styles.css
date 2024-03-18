@@ -126,7 +126,7 @@
     width: 20px;
     height: 20px;
     top: 12px;
-    background-color: var(--body_color);
+    background-color: #ec4d37;
     border-radius: 50%;
     position: absolute;
   }
@@ -144,7 +144,7 @@
     position: absolute;
     width: 1px;
     height: 100%;
-    background-color: var(--body_color);
+    background-color: #ec4d37;
     top: 0;
     left: 7%;
   }

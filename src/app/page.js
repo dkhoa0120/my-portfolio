@@ -6,9 +6,11 @@ import Journey from "@/components/Journey/Journey";
 import ParticlesContainer from "@/components/ParticlesContainer";
 import { IoMdHome } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
-import { AiFillProject } from "react-icons/ai";
+import { PiProjectorScreenChartFill } from "react-icons/pi";
 import { IoIosMail } from "react-icons/io";
 import Project from "@/components/Project/Project";
+import Contact from "@/components/Contact/Contact";
+import { FaRegCopyright } from "react-icons/fa";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -47,7 +49,7 @@ export default function Home() {
 
     const observer = new IntersectionObserver(handleIntersection, {
       rootMargin: "0px",
-      threshold: 0.5,
+      threshold: 0.3,
     });
 
     if (journeySectionRef.current) {
@@ -93,7 +95,7 @@ export default function Home() {
           {" "}
           <IoMdHome
             className={`cursor-pointer ${
-              isAboutSectionInView ? "text-[#ec4d37] text-3xl" : "text-lg"
+              isAboutSectionInView ? "text-[#ec4d37] text-3xl" : "text-xl"
             }`}
           />
         </button>
@@ -101,20 +103,27 @@ export default function Home() {
           {" "}
           <FaUser
             className={`cursor-pointer ${
-              isJourneyInView ? "text-[#ec4d37] text-3xl" : "text-lg"
+              isJourneyInView ? "text-[#ec4d37] text-3xl" : "text-xl"
             }`}
           />
         </button>
         <button onClick={() => scrollToRef(projectSectionRef)}>
           {" "}
-          <AiFillProject
+          <PiProjectorScreenChartFill
             className={`cursor-pointer ${
-              isProjectSectionInView ? "text-[#ec4d37] text-3xl" : "text-lg"
+              isProjectSectionInView ? "text-[#ec4d37] text-3xl" : "text-xl"
             }`}
           />
         </button>
 
-        <IoIosMail className="cursor-pointer text-lg" />
+        <button onClick={() => scrollToRef(contactSectionRef)}>
+          {" "}
+          <IoIosMail
+            className={`cursor-pointer ${
+              isContactSectionInView ? "text-[#ec4d37] text-3xl" : "text-xl"
+            }`}
+          />
+        </button>
       </div>
       <main className="min-h-screen relative ">
         <ParticlesContainer />
@@ -128,12 +137,28 @@ export default function Home() {
         <section id="about" ref={aboutSectionRef}>
           <About />
         </section>
-        <section id="journey" ref={journeySectionRef} className="mt-20">
+        &nbsp;
+        <section id="journey" ref={journeySectionRef} className="mt-36">
           <Journey />
         </section>
-        <section id="project" ref={projectSectionRef}>
+        &nbsp;
+        <section id="project" ref={projectSectionRef} className="mt-32">
           <Project />
         </section>
+        &nbsp;
+        <section id="contact" ref={contactSectionRef} className="mt-32">
+          <Contact />
+        </section>
+        <div className="mt-[100px] flex justify-center p-[50px] w-full bg-[--body_scroll]">
+          <span className="flex items-center gap-1 text-gray-500 justify-center font-bold">
+            Copyright{" "}
+            <span className="flex items-center">
+              <FaRegCopyright />
+              2024
+            </span>{" "}
+            Khoa Le. All Rights Reserved
+          </span>
+        </div>
       </main>
     </>
   );
