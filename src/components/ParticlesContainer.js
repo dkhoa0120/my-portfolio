@@ -17,42 +17,45 @@ const ParticlesContainer = () => {
       loaded={particlesLoaded}
       className="w-full h-[98%] absolute translate-z-0"
       options={{
-        fullScreen: { enable: false },
         background: {
-          color: {
-            value: "",
-          },
+          color: "",
         },
-        fps_limit: 60, // Reduced FPS limit for smoother performance
+        fps_limit: 120,
         interactivity: {
           events: {
             onClick: {
-              enable: false,
+              enable: true,
               mode: "push",
             },
             onHover: {
-              enable: true, // Disabled hover interaction for better performance
+              enable: true,
               mode: "repulse",
             },
             resize: true,
           },
-          mode: {
+          modes: {
+            bubble: {
+              distance: 400,
+              duration: 2,
+              opacity: 0.8,
+              size: 40,
+            },
             push: {
-              quantity: 30, // Further reduced particle quantity for better performance
+              quantity: 4,
             },
             repulse: {
-              distance: 100, // Further reduced repulse distance for better performance
-              duration: 0.2, // Reduced repulse duration for smoother interaction
+              distance: 200,
+              duration: 0.4,
             },
           },
         },
         particles: {
           color: {
-            value: "#ec4d37",
+            value: "#e68e2e",
           },
           links: {
-            color: "#e68e2e",
-            distance: 100, // Further reduced link distance for better performance
+            color: "#ec4d37",
+            distance: 150,
             enable: true,
             opacity: 0.5,
             width: 1,
@@ -63,19 +66,16 @@ const ParticlesContainer = () => {
           move: {
             direction: "none",
             enable: true,
-            outModes: {
-              default: "bounce",
-            },
+            outMode: "bounce",
             random: false,
-            speed: 1,
+            speed: 6,
             straight: false,
           },
           number: {
             density: {
               enable: true,
-              area: 500,
             },
-            value: 20, // Further reduced particle value for better performance
+            value: 80,
           },
           opacity: {
             value: 0.5,
@@ -84,10 +84,10 @@ const ParticlesContainer = () => {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 3 }, // Reduced maximum particle size for better performance
+            random: true,
+            value: 5,
           },
         },
-        detectRetina: true,
       }}
     />
   );

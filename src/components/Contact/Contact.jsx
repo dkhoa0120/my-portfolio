@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FaSquarePhone } from "react-icons/fa6";
 import "react-toastify/dist/ReactToastify.css";
@@ -7,6 +7,26 @@ import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {
   const form = useRef(null);
+
+  const [aos, setAos] = useState("fade-right");
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setAos("fade-left");
+      } else {
+        setAos("fade-right");
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -79,7 +99,7 @@ const Contact = () => {
         </div>
         <div
           className="h-[90%] w-[50%] max-lg:h-[70%] flex items-center justify-center shadow-md relative bg-[#ec4d37] max-lg:w-full "
-          data-aos="fade-left"
+          data-aos={aos}
           style={{ borderRadius: "12px" }}
         >
           <div className="h-[96%] w-[96%] flex flex-col ">

@@ -8,6 +8,7 @@ import { FaLinkedin } from "react-icons/fa6";
 import "./styles.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ParticlesContainer from "../ParticlesContainer";
 
 function About() {
   useEffect(() => {

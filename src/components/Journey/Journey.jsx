@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import "./styles.css";
 
 import "aos/dist/aos.css";
@@ -39,6 +40,26 @@ const skills = [
 ];
 
 function Journey() {
+  const [aos, setAos] = useState("fade-right");
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setAos("fade-left");
+      } else {
+        setAos("fade-right");
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="w-full min-h-screen ">
       <div
@@ -82,7 +103,7 @@ function Journey() {
             </div>
           </div>
         </div>
-        <div className="timeline-container right-timeline" data-aos="fade-left">
+        <div className="timeline-container right-timeline" data-aos={aos}>
           <div className="time-right">May 2021</div>
           <div className="circle right"></div>
           <div className="text-box">
