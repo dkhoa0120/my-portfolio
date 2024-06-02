@@ -6,6 +6,14 @@ import "aos/dist/aos.css";
 
 const skills = [
   {
+    id: 0,
+    img: "/img/icons/nodejs.png",
+  },
+  {
+    id: 0.5,
+    img: "/img/icons/express.png",
+  },
+  {
     id: 1,
     img: "/img/icons/html-5.png",
   },
@@ -36,6 +44,14 @@ const skills = [
   {
     id: 8,
     img: "/img/icons/nextjs.png",
+  },
+  // {
+  //   id: 9,
+  //   img: "/img/icons/mysql.png",
+  // },
+  {
+    id: 10,
+    img: "/img/icons/mongodb.png",
   },
 ];
 
@@ -145,7 +161,7 @@ function Journey() {
           </div>
         </div>
         <div className="timeline-container left-timeline" data-aos="fade-right">
-          <div className="time-left">February 2024</div>
+          <div className="time-left">January 2024</div>
           <div className="circle left"></div>
           <div className="text-box">
             <p style={{ fontSize: "24px", fontWeight: "bold" }}>

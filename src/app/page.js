@@ -90,7 +90,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="fixed h-14 w-full bottom-0 flex items-center dark:bg-[#111111] justify-between p-5 bg-[#eeeeee] z-50 m-auto md:flex-col md:top-20 md:w-[20px] md:h-72 md:right-5 md:rounded-3xl">
+      <div className="fixed h-14 w-full bottom-0 flex items-center dark:bg-[#111111] justify-between p-5 bg-[#eeeeee] z-50 m-auto md:flex-col md:top-20 md:w-[56px] md:h-72 md:right-5 md:rounded-3xl">
         <button onClick={() => scrollToRef(aboutSectionRef)}>
           {" "}
           <IoMdHome

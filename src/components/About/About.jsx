@@ -35,18 +35,22 @@ function About() {
         <h2 className="font-black text-4xl max-lg:text-3xl  max-md:hidden">
           <Typewriter
             onInit={(typewriter) => {
-              typewriter.typeString("Front-End React Developer").start();
+              typewriter.typeString("Fresher Web Developer").start();
             }}
           />
         </h2>
         <p className="intro">
           <span className="des">Hello, my name is Le Dong Khoa,</span> a recent
-          fresher in front-end development. I am enthusiastic about designing
-          UI-UX, proficient in managing front-end logic, and skilled in working
-          with APIs. I am hoping for your guidance and support in my journey.{" "}
+          fresher in fullstack Web development. I am enthusiastic about
+          designing UI-UX, proficient in managing both front-end and back-end
+          logic, and skilled in working with Restful API architecture. I am
+          hoping for your guidance and support in my journey.{" "}
         </p>
         <div className="flex absolute gap-4 mt-4 max-md:static">
-          <a href="cv.pdf" download="CV.pdf">
+          <a
+            href="/cv/LeDongKhoa_CVResume_WebDeveloper.pdf"
+            download="LeDongKhoa_CVResume_WebDeveloper.pdf"
+          >
             <FaDownload className="text-[#EC4D37] text-[26px] cursor-pointer" />
           </a>
           <a href="https://github.com/dkhoa0120">
